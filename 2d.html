@@ -58,13 +58,11 @@ nav{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;
 .cat-divider span{font-family:var(--display);font-size:1.4rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);white-space:nowrap}
 .cat-divider::after{content:'';flex:1;height:1px;background:var(--border)}
 
-/* PROJECT LINE — all images for one project on the same row, equal width */
-.project-line{display:flex;gap:1rem;margin-bottom:1.5rem;align-items:flex-start}
-.project-line .img-card{flex:1;min-width:0;border-radius:16px;overflow:hidden;cursor:pointer}
+/* PROJECT LINE — 4-column grid, every image same width */
+.project-line{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1.5rem;align-items:start}
+.project-line .img-card{border-radius:16px;overflow:hidden;cursor:pointer}
 .project-line .img-card:hover{opacity:.88;transition:opacity .2s}
 .project-line .img-card img{display:block;width:100%;height:auto}
-/* Single image in a row = 50% width to match paired layouts */
-.project-line .img-card:only-child{flex:none;width:50%}
 
 /* SKETCHES GRID */
 .sketches-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.5rem}
@@ -99,8 +97,7 @@ footer{padding:3rem 6vw 4rem;border-top:none;background:rgba(255,255,255,.55)}
   .portfolio-contact{padding:0 1.2rem 1.5rem}
   .filters{padding:0 1.2rem 1.5rem}
   .main{padding:0 1.2rem 3rem}
-  .project-line{flex-direction:column}
-  .project-line .img-card:only-child{width:100%}
+  .project-line{grid-template-columns:repeat(2,1fr)}
   .sketches-grid{grid-template-columns:1fr}
   .lb-nav{display:none}
 }
