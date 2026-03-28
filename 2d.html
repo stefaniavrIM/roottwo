@@ -60,23 +60,23 @@ nav{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;
 
 /* PROJECT LINE — all images for one project on the same row */
 .project-line{display:flex;gap:1rem;margin-bottom:1.5rem;align-items:flex-start}
-.project-line .img-card{flex:1;min-width:0;border-radius:20px;overflow:hidden;cursor:pointer;background:var(--card);border:1px solid var(--border);box-shadow:var(--shadow);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.project-line .img-card{flex:1;min-width:0;border-radius:20px;overflow:hidden;cursor:pointer;background:transparent;border:none;box-shadow:var(--shadow);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
 .project-line .img-card:hover{transform:translateY(-4px);box-shadow:0 24px 50px rgba(124,58,237,.14)}
-.project-line .img-card img{display:block;width:100%;height:auto}
+.project-line .img-card img{display:block;width:100%;height:auto;border-radius:20px}
 /* Hero image gets more space */
 .project-line .img-card.hero{flex:1.6}
 
 /* SINGLES ROW */
 .singles-row{display:flex;gap:1rem;margin-bottom:1.5rem;align-items:flex-start}
-.singles-row .img-card{flex:1;max-width:380px;border-radius:20px;overflow:hidden;cursor:pointer;background:var(--card);border:1px solid var(--border);box-shadow:var(--shadow);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.singles-row .img-card{flex:1;max-width:380px;border-radius:20px;overflow:hidden;cursor:pointer;background:transparent;border:none;box-shadow:var(--shadow);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
 .singles-row .img-card:hover{transform:translateY(-4px);box-shadow:0 24px 50px rgba(124,58,237,.14)}
-.singles-row .img-card img{display:block;width:100%;height:auto}
+.singles-row .img-card img{display:block;width:100%;height:auto;border-radius:20px}
 
 /* SKETCHES GRID */
 .sketches-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.5rem}
-.sketch-card{border-radius:20px;overflow:hidden;cursor:pointer;background:var(--card);border:1px solid var(--border);box-shadow:var(--shadow);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.sketch-card{border-radius:20px;overflow:hidden;cursor:pointer;background:transparent;border:none;box-shadow:var(--shadow);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
 .sketch-card:hover{transform:translateY(-4px);box-shadow:0 24px 50px rgba(124,58,237,.14)}
-.sketch-card img{display:block;width:100%;height:auto}
+.sketch-card img{display:block;width:100%;height:auto;border-radius:20px}
 
 /* LIGHTBOX */
 .lightbox{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .35s var(--ease)}
@@ -154,11 +154,12 @@ footer{padding:3rem 6vw 4rem;border-top:none;background:rgba(255,255,255,.55)}
   <!-- ═══════════════ CHARACTER DESIGN ═══════════════ -->
   <div class="cat-divider" data-divider="character-design"><span>Character Design</span></div>
 
-  <!-- NURSE TECH — render + flat colors + color variations -->
+  <!-- NURSE TECH — render + flat colors + color variations + sketches -->
   <div class="project-line" data-category="character-design">
     <div class="img-card hero" data-lb><img alt="Nurse Tech — final render" src="assets/stefania-avramidi-nurse-tech-sml.webp"/></div>
     <div class="img-card" data-lb><img alt="Nurse Tech — flat colors presentation" src="assets/stefania-avramidi-2024-true-final-presentation.jpg"/></div>
     <div class="img-card" data-lb><img alt="Nurse Tech — color variations" src="assets/stefania-avramidi-color-variations.jpg"/></div>
+    <div class="img-card" data-lb><img alt="Nurse Tech — sketches" src="assets/stefania-avramidi-sketches-final.jpg"/></div>
   </div>
 
   <!-- FOX WIZARD — render + process -->
@@ -173,9 +174,12 @@ footer{padding:3rem 6vw 4rem;border-top:none;background:rgba(255,255,255,.55)}
     <div class="img-card" data-lb><img alt="Kaito — exploration sheet" src="assets/stefania-avramidi-kaito-exploration-small.jpg"/></div>
   </div>
 
-  <!-- GENJI -->
-  <div class="singles-row" data-category="character-design">
-    <div class="img-card" data-lb><img alt="Genji — Corrupted Monk" src="assets/stefania-avramidi-final-genji-lower-res.jpg"/></div>
+  <!-- GENJI — render + concepts + yin yang + weapons -->
+  <div class="project-line" data-category="character-design">
+    <div class="img-card hero" data-lb><img alt="Genji — Corrupted Monk" src="assets/stefania-avramidi-final-genji-lower-res.jpg"/></div>
+    <div class="img-card" data-lb><img alt="Genji — concepts" src="assets/stefania-avramidi-concepts-copy.jpg"/></div>
+    <div class="img-card" data-lb><img alt="Genji — yin yang concepts" src="assets/stefania-avramidi-ying-yang-concepts-2-copy.jpg"/></div>
+    <div class="img-card" data-lb><img alt="Genji — weapons" src="assets/stefania-avramidi-weapons-2-copy.jpg"/></div>
   </div>
 
   <!-- IZZY — render + thumbnails -->
@@ -198,24 +202,21 @@ footer{padding:3rem 6vw 4rem;border-top:none;background:rgba(255,255,255,.55)}
   <!-- ═══════════════ PROPS ═══════════════ -->
   <div class="cat-divider" data-divider="props"><span>Props</span></div>
 
-  <!-- ARCADE MACHINE — concept + ref + sketches -->
+  <!-- ARCADE MACHINE — concept + sketches -->
   <div class="project-line" data-category="props">
     <div class="img-card hero" data-lb><img alt="Arcade Machine — concept" src="assets/stefania-avramidi-arcade-concept.jpg"/></div>
-    <div class="img-card" data-lb><img alt="Arcade Machine — reference" src="assets/stefania-avramidi-arcade-ref.jpg"/></div>
     <div class="img-card" data-lb><img alt="Arcade Machine — sketches" src="assets/stefania-avramidi-arcade-sketches.jpg"/></div>
   </div>
 
-  <!-- COOLER — render + ref + sketches -->
+  <!-- COOLER — render + sketches -->
   <div class="project-line" data-category="props">
     <div class="img-card hero" data-lb><img alt="Cooler Box — render" src="assets/stefania-avramidi-cooler-render.jpg"/></div>
-    <div class="img-card" data-lb><img alt="Cooler Box — reference" src="assets/stefania-avramidi-cooler-ref.jpg"/></div>
     <div class="img-card" data-lb><img alt="Cooler Box — sketches" src="assets/stefania-avramidi-cooler-sketches.jpg"/></div>
   </div>
 
   <!-- SCI-FI CRATES -->
-  <div class="project-line" data-category="props">
+  <div class="singles-row" data-category="props">
     <div class="img-card" data-lb><img alt="Sci-Fi Crates" src="assets/scifi-crates.jpg"/></div>
-    <div class="img-card" data-lb><img alt="Sci-Fi Boxes" src="assets/stefania-avramidi-3-sci-fi-boxes-small.jpg"/></div>
   </div>
 
   <!-- BIRBY EGG COOKER -->
@@ -226,9 +227,10 @@ footer{padding:3rem 6vw 4rem;border-top:none;background:rgba(255,255,255,.55)}
   <!-- ═══════════════ MOBILE GAME ART ═══════════════ -->
   <div class="cat-divider" data-divider="mobile-game-art"><span>Mobile Game Art</span></div>
 
-  <!-- FIRESTONE KEY ART -->
-  <div class="singles-row" data-category="mobile-game-art">
-    <div class="img-card" data-lb><img alt="Firestone — key art" src="assets/stefania-avramidi-final-s.jpg"/></div>
+  <!-- FIRESTONE — key art + lineart -->
+  <div class="project-line" data-category="mobile-game-art">
+    <div class="img-card hero" data-lb><img alt="Firestone — key art illustration" src="assets/stefania-avramidi-final-s.jpg"/></div>
+    <div class="img-card" data-lb><img alt="Firestone — lineart" src="assets/stefania-avramidi-lineart-s.jpg"/></div>
   </div>
 
   <!-- ELEMENTALS + BUILDINGS -->
@@ -257,12 +259,7 @@ footer{padding:3rem 6vw 4rem;border-top:none;background:rgba(255,255,255,.55)}
     <div class="sketch-card" data-lb><img alt="Thumbnails" src="assets/thumbnails-1.jpg"/></div>
     <div class="sketch-card" data-lb><img alt="Design exercise" src="assets/stefania-avramidi-exercise-1-final-copy.jpg"/></div>
     <div class="sketch-card" data-lb><img alt="Sakura Tech sketches" src="assets/stefania-avramidi-sakura-tech-version-sketches-small-res.jpg"/></div>
-    <div class="sketch-card" data-lb><img alt="Concepts" src="assets/stefania-avramidi-concepts-copy.jpg"/></div>
-    <div class="sketch-card" data-lb><img alt="Yin Yang concepts" src="assets/stefania-avramidi-ying-yang-concepts-2-copy.jpg"/></div>
-    <div class="sketch-card" data-lb><img alt="Weapons study" src="assets/stefania-avramidi-weapons-2-copy.jpg"/></div>
     <div class="sketch-card" data-lb><img alt="Kunai" src="assets/stefania-avramidi-kunai-copy.jpg"/></div>
-    <div class="sketch-card" data-lb><img alt="Sketches" src="assets/stefania-avramidi-sketches-final.jpg"/></div>
-    <div class="sketch-card" data-lb><img alt="Lineart" src="assets/stefania-avramidi-lineart-s.jpg"/></div>
     <div class="sketch-card" data-lb><img alt="Tech Arms" src="assets/stefania-avramidi-tech-arms-stefania-avramidi-small-1.jpg"/></div>
     <div class="sketch-card" data-lb><img alt="Flapper Girl" src="assets/stefania-avramidi-flapper-girl.jpg"/></div>
     <div class="sketch-card" data-lb><img alt="Gangster" src="assets/stefania-avramidi-gangster-copy.jpg"/></div>
