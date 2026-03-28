@@ -63,12 +63,8 @@ nav{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;
 .project-line .img-card{flex:1;min-width:0;border-radius:16px;overflow:hidden;cursor:pointer}
 .project-line .img-card:hover{opacity:.88;transition:opacity .2s}
 .project-line .img-card img{display:block;width:100%;height:auto}
-
-/* SINGLES ROW */
-.singles-row{display:flex;gap:1rem;margin-bottom:1.5rem;align-items:flex-start}
-.singles-row .img-card{width:calc(50% - .5rem);flex-shrink:0;border-radius:16px;overflow:hidden;cursor:pointer}
-.singles-row .img-card:hover{opacity:.88;transition:opacity .2s}
-.singles-row .img-card img{display:block;width:100%;height:auto}
+/* Single image in a row = 50% width to match paired layouts */
+.project-line .img-card:only-child{flex:none;width:50%}
 
 /* SKETCHES GRID */
 .sketches-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.5rem}
@@ -104,8 +100,7 @@ footer{padding:3rem 6vw 4rem;border-top:none;background:rgba(255,255,255,.55)}
   .filters{padding:0 1.2rem 1.5rem}
   .main{padding:0 1.2rem 3rem}
   .project-line{flex-direction:column}
-  .singles-row{flex-direction:column}
-  .singles-row .img-card{width:100%}
+  .project-line .img-card:only-child{width:100%}
   .sketches-grid{grid-template-columns:1fr}
   .lb-nav{display:none}
 }
@@ -192,7 +187,7 @@ footer{padding:3rem 6vw 4rem;border-top:none;background:rgba(255,255,255,.55)}
   </div>
 
   <!-- QUINN -->
-  <div class="singles-row" data-category="character-design">
+  <div class="project-line" data-category="character-design">
     <div class="img-card" data-lb><img alt="Quinn" src="assets/stefania-avramidi-quinn-stefania-avramidi-small.jpg"/></div>
   </div>
 
@@ -212,12 +207,12 @@ footer{padding:3rem 6vw 4rem;border-top:none;background:rgba(255,255,255,.55)}
   </div>
 
   <!-- SCI-FI CRATES -->
-  <div class="singles-row" data-category="props">
+  <div class="project-line" data-category="props">
     <div class="img-card" data-lb><img alt="Sci-Fi Crates" src="assets/scifi-crates.jpg"/></div>
   </div>
 
   <!-- BIRBY EGG COOKER -->
-  <div class="singles-row" data-category="props">
+  <div class="project-line" data-category="props">
     <div class="img-card" data-lb><img alt="Birby Egg Cooker" src="assets/stefania-avramidi-birby-egg-cooker-lower-res.jpg"/></div>
   </div>
 
