@@ -58,9 +58,9 @@ nav{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;
 .cat-divider span{font-family:var(--display);font-size:1.4rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);white-space:nowrap}
 .cat-divider::after{content:'';flex:1;height:1px;background:var(--border)}
 
-/* PROJECT LINE — 4-column grid, every image same width */
-.project-line{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1.5rem;align-items:start}
-.project-line .img-card{border-radius:16px;overflow:hidden;cursor:pointer}
+/* PROJECT LINE — fixed 25% card width, centered when fewer than 4 */
+.project-line{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;justify-content:center}
+.project-line .img-card{width:calc(27.5% - .75rem);border-radius:16px;overflow:hidden;cursor:pointer}
 .project-line .img-card:hover{opacity:.88;transition:opacity .2s}
 .project-line .img-card img{display:block;width:100%;height:auto}
 
@@ -97,7 +97,7 @@ footer{padding:3rem 6vw 4rem;border-top:none;background:rgba(255,255,255,.55)}
   .portfolio-contact{padding:0 1.2rem 1.5rem}
   .filters{padding:0 1.2rem 1.5rem}
   .main{padding:0 1.2rem 3rem}
-  .project-line{grid-template-columns:repeat(2,1fr)}
+  .project-line .img-card{width:calc(50% - .5rem)}
   .sketches-grid{grid-template-columns:1fr}
   .lb-nav{display:none}
 }
